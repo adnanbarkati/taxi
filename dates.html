@@ -23,14 +23,14 @@
             margin: 20px auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
+            max-width: 600px;
         }
         label {
             display: block;
             margin-top: 10px;
             font-size: 18px;
         }
-        select, input[type="number"] {
+        select {
             padding: 10px;
             margin-top: 10px;
             width: 100%;
@@ -58,60 +58,44 @@
         a:hover {
             text-decoration: underline;
         }
-        /* Top Banner Styling */
-        .top-banner {
+        .top-banner, .bottom-banner {
             background-color: #333;
             color: white;
-            padding: 10px 0;
-        }
-        .top-banner img {
-            width: 50px;
-            vertical-align: middle;
-        }
-        .top-banner h2 {
-            display: inline;
-            font-size: 24px;
-            margin: 0 10px;
-        }
-        .top-banner p {
-            display: inline;
-            font-size: 16px;
-        }
-        /* Bottom Banner Styling */
-        .bottom-banner {
-            background-color: #008CBA;
-            color: white;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .bottom-banner p {
-            margin: 0;
-            font-size: 18px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
     <!-- Top Banner -->
     <div class="top-banner">
-        <img src="logo.png" alt="Company Logo"> <!-- Placeholder for Logo -->
-        <h2>YARS GROUP OF COMPANIES</h2>
-        <p>Contact us at: +966 563 902 706</p>
+        <h2>YARS GROUP OF COMPANIES - Contact us: +966 563 902 706</h2>
     </div>
 
     <h1>Order Dates</h1>
+
     <form id="datesForm">
         <label for="dateType">Select Date Type:</label>
         <select id="dateType">
-            <option value="ajwa">Ajwa (Medina)</option>
-            <option value="sukkari">Sukkari (Qassim)</option>
-            <option value="khalas">Khalas (Al Ahsa)</option>
-            <option value="mabroom">Mabroom</option>
+            <option value="ajwa">Ajwa - 45 ر.س / Kg</option>
+            <option value="mabroom">Mabroom - 40 ر.س / Kg</option>
+            <option value="amjhdoul">Amjhdoul - 30 ر.س / Kg</option>
+            <option value="amber">Amber - 55 ر.س / Kg</option>
+            <option value="burni">Burni - 35 ر.س / Kg</option>
+            <option value="saffavi">Saffavi - 38 ر.س / Kg</option>
+            <option value="mashrooq">Mashrooq - 32 ر.س / Kg</option>
+            <option value="sugai">Sugai - 50 ر.س / Kg</option>
+            <option value="sukkari">Sukkari - 42 ر.س / Kg</option>
+            <option value="seedless">Seedless - 60 ر.س / Kg</option>
+            <option value="rabia">Rabia - 35 ر.س / Kg</option>
         </select>
 
-        <label for="kg">Select Quantity (KG):</label>
-        <input type="number" id="kg" min="1" value="1">
+        <label for="quantity">Select Quantity:</label>
+        <select id="quantity">
+            <option value="0.5">500 gm</option>
+            <option value="1">1 Kg</option>
+            <option value="5">5 Kg</option>
+            <option value="10">10 Kg</option>
+        </select>
 
         <button type="button" onclick="sendDatesOrder()">Order Now</button>
     </form>
@@ -119,8 +103,31 @@
     <script>
         function sendDatesOrder() {
             var dateType = document.getElementById("dateType").value;
-            var kg = document.getElementById("kg").value;
-            var message = `Dates Order: ${kg}kg of ${dateType} dates.`;
+            var quantity = document.getElementById("quantity").value;
+
+            // Define base prices for each date type
+            var basePrices = {
+                "ajwa": 45,
+                "mabroom": 40,
+                "amjhdoul": 30,
+                "amber": 55,
+                "burni": 35,
+                "saffavi": 38,
+                "mashrooq": 32,
+                "sugai": 50,
+                "sukkari": 42,
+                "seedless": 60,
+                "rabia": 35
+            };
+
+            // Calculate total price based on selected date type and quantity
+            var basePrice = basePrices[dateType];
+            var totalPrice = basePrice * quantity;
+
+            // Create a user-friendly message for WhatsApp
+            var message = `Dates Order:\nDate Type: ${dateType}\nQuantity: ${quantity} Kg\nTotal Price: ${totalPrice} ر.س`;
+            
+            // Open WhatsApp with pre-filled message
             window.open(`https://wa.me/966563902706?text=${encodeURIComponent(message)}`);
         }
     </script>
