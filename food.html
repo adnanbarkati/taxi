@@ -95,20 +95,21 @@
             <option value="paratha">Paratha - 3 SR</option>
         </select>
 
+        <button type="button" onclick="sendRestaurantOrder()">Order from Restaurant</button>
+
         <!-- Special Sabeel Option -->
         <label for="sabeelOption">Special Sabeel: Special Chicken Biryani</label>
         <input type="number" id="sabeelQuantity" min="1" value="1">
         <p>Price: 8 SR per box</p>
 
-        <button type="button" onclick="sendFoodOrder()">Order Now</button>
+        <button type="button" onclick="sendSabeelOrder()">Order Sabeel Special Chicken Biryani</button>
     </form>
 
     <script>
-        function sendFoodOrder() {
-            // Get selected restaurant and food item
+        // Function for ordering from the restaurant
+        function sendRestaurantOrder() {
             var restaurant = document.getElementById("restaurant").value;
             var foodItem = document.getElementById("foodItem").value;
-            var sabeelQuantity = document.getElementById("sabeelQuantity").value;
 
             // Define base prices for menu items
             var basePrices = {
@@ -121,12 +122,25 @@
                 "paratha": 3
             };
 
-            // Calculate total price for regular menu item and sabeel quantity
+            // Calculate total price for the selected menu item
             var foodItemPrice = basePrices[foodItem];
-            var sabeelPrice = sabeelQuantity * 8;  // 8 SR per box of Special Chicken Biryani
 
             // Create a user-friendly message for WhatsApp
-            var message = `Food Order from ${restaurant}:\nSelected Item: ${foodItem}\nPrice: ${foodItemPrice} SR\nSabeel Special Chicken Biryani (${sabeelQuantity} box(es)): ${sabeelPrice} SR\nTotal Price: ${foodItemPrice + sabeelPrice} SR`;
+            var message = `Food Order from ${restaurant}:\nSelected Item: ${foodItem}\nPrice: ${foodItemPrice} SR`;
+
+            // Open WhatsApp with pre-filled message
+            window.open(`https://wa.me/966563902706?text=${encodeURIComponent(message)}`);
+        }
+
+        // Function for ordering from the Sabeel (Special Chicken Biryani)
+        function sendSabeelOrder() {
+            var sabeelQuantity = document.getElementById("sabeelQuantity").value;
+
+            // Calculate the total price for Sabeel Chicken Biryani
+            var sabeelPrice = sabeelQuantity * 8;  // 8 SR per box
+
+            // Create a user-friendly message for WhatsApp
+            var message = `Sabeel Order: Special Chicken Biryani\nQuantity: ${sabeelQuantity} box(es)\nTotal Price: ${sabeelPrice} SR`;
 
             // Open WhatsApp with pre-filled message
             window.open(`https://wa.me/966563902706?text=${encodeURIComponent(message)}`);
