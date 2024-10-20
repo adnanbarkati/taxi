@@ -17,25 +17,25 @@
             color: white;
             padding: 15px 0;
         }
-        form {
+        .vehicle-container {
             background-color: white;
             padding: 20px;
             margin: 20px auto;
             border-radius: 8px;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-            max-width: 500px;
+            max-width: 800px;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        .rate-list {
+            text-align: left;
+            margin-top: 15px;
         }
         label {
             display: block;
             margin-top: 10px;
             font-size: 18px;
-        }
-        select, input[type="number"] {
-            padding: 10px;
-            margin-top: 10px;
-            width: 100%;
-            border: 1px solid #ccc;
-            border-radius: 4px;
         }
         button {
             margin-top: 20px;
@@ -58,74 +58,105 @@
         a:hover {
             text-decoration: underline;
         }
-        /* Top Banner Styling */
-        .top-banner {
+        .top-banner, .bottom-banner {
             background-color: #333;
             color: white;
-            padding: 10px 0;
-        }
-        .top-banner img {
-            width: 50px;
-            vertical-align: middle;
-        }
-        .top-banner h2 {
-            display: inline;
-            font-size: 24px;
-            margin: 0 10px;
-        }
-        .top-banner p {
-            display: inline;
-            font-size: 16px;
-        }
-        /* Bottom Banner Styling */
-        .bottom-banner {
-            background-color: #008CBA;
-            color: white;
-            padding: 20px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-        }
-        .bottom-banner p {
-            margin: 0;
-            font-size: 18px;
+            padding: 10px;
         }
     </style>
 </head>
 <body>
     <!-- Top Banner -->
     <div class="top-banner">
-        <img src="logo.png" alt="Company Logo"> <!-- Placeholder for Logo -->
-        <h2>YARS GROUP OF COMPANIES</h2>
-        <p>Contact us at: +966 563 902 706</p>
+        <h2>YARS GROUP OF COMPANIES - Contact us: +966 563 902 706</h2>
     </div>
 
     <h1>Transportation Booking</h1>
-    <form id="transportationForm">
-        <label for="carType">Select Car:</label>
-        <select id="carType">
-            <option value="sedan">Sedan (Toyota Camry)</option>
-            <option value="suv">SUV (Toyota Land Cruiser)</option>
-            <option value="van">Van (Hyundai H1)</option>
-            <option value="luxury">Luxury (Lexus LX)</option>
-        </select>
 
-        <label for="route">Select Route:</label>
-        <select id="route">
-            <option value="airport-madina">Jeddah Airport to Madina</option>
-            <option value="airport-makkah">Jeddah Airport to Makkah</option>
-            <option value="madina-makkah">Madina to Makkah</option>
-            <option value="makkah-airport">Makkah to Jeddah Airport</option>
-        </select>
+    <div class="vehicle-container">
+        <h2>H1 Hyundai</h2>
+        <p>150,00 ر.س – 800,00 ر.س</p>
+        <p>Seats: 7 Seater, Luggage: 08 to 10</p>
+        <div class="rate-list">
+            <strong>Rate List:</strong>
+            <ul>
+                <li>Jeddah Airport to Makkah Hotel – 350 ر.س</li>
+                <li>Makkah Hotel to Jeddah Airport – 300 ر.س</li>
+                <li>Makkah Hotel to Madina Hotel – 600 ر.س</li>
+                <li>Madina Hotel to Makkah Hotel – 600 ر.س</li>
+                <li>Madina Airport to Madina Hotel – 200 ر.س</li>
+                <li>Madina Hotel to Madina Airport – 150 ر.س</li>
+                <li>Makkah Ziyarat – 300 ر.س</li>
+                <li>Madina Ziyarat – 250 ر.س</li>
+                <li>Jeddah Airport to Madina Hotel – 700 ر.س</li>
+                <li>Jeddah to Taif & Return – 800 ر.س</li>
+                <li>Makkah to Taif & Return (Taif Ziyarat) – 600 ر.س</li>
+                <li>Jeddah Airport to Jeddah Hotel – 250 ر.س</li>
+                <li>Hotel to Train Station – 150 ر.س</li>
+                <li>Train Station to Hotel – 150 ر.س</li>
+                <li>Per Hour Rate – 150 ر.س</li>
+            </ul>
+        </div>
+        <button onclick="sendTransportationOrder('H1 Hyundai')">Book H1 Hyundai</button>
+    </div>
 
-        <button type="button" onclick="sendTransportationOrder()">Book Now</button>
-    </form>
+    <div class="vehicle-container">
+        <h2>Ford Taurus</h2>
+        <p>130,00 ر.س – 800,00 ر.س</p>
+        <p>Seats: 4 Seater, Luggage: 02 to 03</p>
+        <div class="rate-list">
+            <strong>Rate List:</strong>
+            <ul>
+                <li>Jeddah Airport to Makkah Hotel – 300 ر.س</li>
+                <li>Makkah Hotel to Jeddah Airport – 250 ر.س</li>
+                <li>Makkah Hotel to Madina Hotel – 650 ر.س</li>
+                <li>Madina Hotel to Makkah Hotel – 650 ر.س</li>
+                <li>Madina Airport to Madina Hotel – 200 ر.س</li>
+                <li>Madina Hotel to Madina Airport – 150 ر.س</li>
+                <li>Makkah Ziyarat – 300 ر.س</li>
+                <li>Madina Ziyarat – 250 ر.س</li>
+                <li>Jeddah Airport to Madina Hotel – 650 ر.س</li>
+                <li>Jeddah to Taif & Return – 800 ر.س</li>
+                <li>Makkah to Taif & Return (Taif Ziyarat) – 550 ر.س</li>
+                <li>Jeddah Airport to Jeddah Hotel – 250 ر.س</li>
+                <li>Hotel to Train Station – 150 ر.س</li>
+                <li>Train Station to Hotel – 150 ر.س</li>
+                <li>Per Hour Rate – 130 ر.س</li>
+            </ul>
+        </div>
+        <button onclick="sendTransportationOrder('Ford Taurus')">Book Ford Taurus</button>
+    </div>
+
+    <div class="vehicle-container">
+        <h2>Hyundai Staria</h2>
+        <p>200,00 ر.س – 850,00 ر.س</p>
+        <p>Seats: 7 Seater, Luggage: 08 to 10</p>
+        <div class="rate-list">
+            <strong>Rate List:</strong>
+            <ul>
+                <li>Jeddah Airport to Makkah Hotel – 400 ر.س</li>
+                <li>Makkah Hotel to Jeddah Airport – 350 ر.س</li>
+                <li>Makkah Hotel to Madina Hotel – 700 ر.س</li>
+                <li>Madina Hotel to Makkah Hotel – 700 ر.س</li>
+                <li>Madina Airport to Madina Hotel – 250 ر.س</li>
+                <li>Madina Hotel to Madina Airport – 200 ر.س</li>
+                <li>Makkah Ziyarat – 350 ر.س</li>
+                <li>Madina Ziyarat – 300 ر.س</li>
+                <li>Jeddah Airport to Madina Hotel – 800 ر.س</li>
+                <li>Jeddah to Taif & Return – 850 ر.س</li>
+                <li>Makkah to Taif & Return (Taif Ziyarat) – 650 ر.س</li>
+                <li>Jeddah Airport to Jeddah Hotel – 300 ر.س</li>
+                <li>Hotel to Train Station – 200 ر.س</li>
+                <li>Train Station to Hotel – 200 ر.س</li>
+                <li>Per Hour Rate – 200 ر.س</li>
+            </ul>
+        </div>
+        <button onclick="sendTransportationOrder('Hyundai Staria')">Book Hyundai Staria</button>
+    </div>
 
     <script>
-        function sendTransportationOrder() {
-            var carType = document.getElementById("carType").value;
-            var route = document.getElementById("route").value;
-            var message = `Transportation Booking: Car - ${carType}, Route - ${route}`;
+        function sendTransportationOrder(carType) {
+            var message = `Transportation Booking: Car - ${carType}`;
             window.open(`https://wa.me/966563902706?text=${encodeURIComponent(message)}`);
         }
     </script>
