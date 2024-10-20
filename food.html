@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Food</title>
+</head>
+<body>
+    <h1>Order Food</h1>
+    
+    <form id="foodForm">
+        <label for="restaurant">Select Restaurant:</label>
+        <select id="restaurant">
+            <option value="restaurant1">Restaurant 1</option>
+            <option value="restaurant2">Restaurant 2</option>
+        </select>
+        
+        <br><br>
+        
+        <label for="foodItem">Select Food Item:</label>
+        <select id="foodItem">
+            <option value="pizza">Pizza</option>
+            <option value="burger">Burger</option>
+            <option value="pasta">Pasta</option>
+        </select>
+        
+        <br><br>
+        <button type="button" onclick="sendFoodOrder()">Order Now</button>
+    </form>
+
+    <script>
+        function sendFoodOrder() {
+            var restaurant = document.getElementById("restaurant").value;
+            var foodItem = document.getElementById("foodItem").value;
+            var message = `Food Order: ${foodItem} from ${restaurant}.`;
+            window.open(`https://wa.me/966563902706?text=${encodeURIComponent(message)}`);
+        }
+    </script>
+
+    <br><br>
+    <a href="index.html">Back to Transportation</a>
+    <br>
+    <a href="dates.html">Order Dates</a>
+</body>
+</html>
