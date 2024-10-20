@@ -96,41 +96,117 @@
             <strong>Select Route:</strong>
             <form id="hyundaiForm">
                 <ul>
-                    <li><input type="radio" name="route" value="Jeddah Airport to Makkah Hotel - 350"> Jeddah Airport to Makkah Hotel – 350 ر.س</li>
-                    <li><input type="radio" name="route" value="Makkah Hotel to Jeddah Airport - 300"> Makkah Hotel to Jeddah Airport – 300 ر.س</li>
-                    <li><input type="radio" name="route" value="Makkah Hotel to Madina Hotel - 600"> Makkah Hotel to Madina Hotel – 600 ر.س</li>
-                    <li><input type="radio" name="route" value="Madina Hotel to Makkah Hotel - 600"> Madina Hotel to Makkah Hotel – 600 ر.س</li>
-                    <li><input type="radio" name="route" value="Madina Airport to Madina Hotel - 200"> Madina Airport to Madina Hotel – 200 ر.س</li>
-                    <li><input type="radio" name="route" value="Madina Hotel to Madina Airport - 150"> Madina Hotel to Madina Airport – 150 ر.س</li>
-                    <li><input type="radio" name="route" value="Makkah Ziyarat - 300"> Makkah Ziyarat – 300 ر.س</li>
-                    <li><input type="radio" name="route" value="Madina Ziyarat - 250"> Madina Ziyarat – 250 ر.س</li>
-                    <li><input type="radio" name="route" value="Jeddah Airport to Madina Hotel - 700"> Jeddah Airport to Madina Hotel – 700 ر.س</li>
-                    <li><input type="radio" name="route" value="Jeddah to Taif & Return - 800"> Jeddah to Taif & Return – 800 ر.س</li>
-                    <li><input type="radio" name="route" value="Makkah to Taif & Return (Taif Ziyarat) - 600"> Makkah to Taif & Return (Taif Ziyarat) – 600 ر.س</li>
-                    <li><input type="radio" name="route" value="Jeddah Airport to Jeddah Hotel - 250"> Jeddah Airport to Jeddah Hotel – 250 ر.س</li>
-                    <li><input type="radio" name="route" value="Hotel to Train Station - 150"> Hotel to Train Station – 150 ر.س</li>
-                    <li><input type="radio" name="route" value="Train Station to Hotel - 150"> Train Station to Hotel – 150 ر.س</li>
-                    <li><input type="radio" name="route" value="Per Hour Rate - 150"> Per Hour Rate – 150 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Jeddah Airport to Makkah Hotel - 350"> Jeddah Airport to Makkah Hotel – 350 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Makkah Hotel to Jeddah Airport - 300"> Makkah Hotel to Jeddah Airport – 300 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Makkah Hotel to Madina Hotel - 600"> Makkah Hotel to Madina Hotel – 600 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Madina Hotel to Makkah Hotel - 600"> Madina Hotel to Makkah Hotel – 600 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Madina Airport to Madina Hotel - 200"> Madina Airport to Madina Hotel – 200 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Madina Hotel to Madina Airport - 150"> Madina Hotel to Madina Airport – 150 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Makkah Ziyarat - 300"> Makkah Ziyarat – 300 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Madina Ziyarat - 250"> Madina Ziyarat – 250 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Jeddah Airport to Madina Hotel - 700"> Jeddah Airport to Madina Hotel – 700 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Jeddah to Taif & Return - 800"> Jeddah to Taif & Return – 800 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Makkah to Taif & Return (Taif Ziyarat) - 600"> Makkah to Taif & Return (Taif Ziyarat) – 600 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Jeddah Airport to Jeddah Hotel - 250"> Jeddah Airport to Jeddah Hotel – 250 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Hotel to Train Station - 150"> Hotel to Train Station – 150 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Train Station to Hotel - 150"> Train Station to Hotel – 150 ر.س</li>
+                    <li><input type="radio" name="routeHyundai" value="Per Hour Rate - 150"> Per Hour Rate – 150 ر.س</li>
                 </ul>
-                <label for="travelDate">Select Travel Date & Time:</label>
-                <input type="datetime-local" id="travelDate" name="travelDate">
-                <button type="button" onclick="sendTransportationOrder()">Book H1 Hyundai</button>
+                <label for="travelDateHyundai">Select Travel Date & Time:</label>
+                <input type="datetime-local" id="travelDateHyundai" name="travelDateHyundai">
+                <button type="button" onclick="sendTransportationOrder('H1 Hyundai')">Book H1 Hyundai</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Ford Taurus Section -->
+    <div class="vehicle-container">
+        <h2>Ford Taurus</h2>
+        <p>130,00 ر.س – 800,00 ر.س</p>
+        <p>Seats: 4 Seater, Luggage: 02 to 03</p>
+        <div class="rate-list">
+            <strong>Select Route:</strong>
+            <form id="fordForm">
+                <ul>
+                    <li><input type="radio" name="routeFord" value="Jeddah Airport to Makkah Hotel - 300"> Jeddah Airport to Makkah Hotel – 300 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Makkah Hotel to Jeddah Airport - 250"> Makkah Hotel to Jeddah Airport – 250 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Makkah Hotel to Madina Hotel - 650"> Makkah Hotel to Madina Hotel – 650 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Madina Hotel to Makkah Hotel - 650"> Madina Hotel to Makkah Hotel – 650 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Madina Airport to Madina Hotel - 200"> Madina Airport to Madina Hotel – 200 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Madina Hotel to Madina Airport - 150"> Madina Hotel to Madina Airport – 150 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Makkah Ziyarat - 300"> Makkah Ziyarat – 300 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Madina Ziyarat - 250"> Madina Ziyarat – 250 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Jeddah Airport to Madina Hotel - 650"> Jeddah Airport to Madina Hotel – 650 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Jeddah to Taif & Return - 800"> Jeddah to Taif & Return – 800 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Makkah to Taif & Return (Taif Ziyarat) - 550"> Makkah to Taif & Return (Taif Ziyarat) – 550 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Jeddah Airport to Jeddah Hotel - 250"> Jeddah Airport to Jeddah Hotel – 250 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Hotel to Train Station - 150"> Hotel to Train Station – 150 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Train Station to Hotel - 150"> Train Station to Hotel – 150 ر.س</li>
+                    <li><input type="radio" name="routeFord" value="Per Hour Rate - 130"> Per Hour Rate – 130 ر.س</li>
+                </ul>
+                <label for="travelDateFord">Select Travel Date & Time:</label>
+                <input type="datetime-local" id="travelDateFord" name="travelDateFord">
+                <button type="button" onclick="sendTransportationOrder('Ford Taurus')">Book Ford Taurus</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Hyundai Staria Section -->
+    <div class="vehicle-container">
+        <h2>Hyundai Staria</h2>
+        <p>200,00 ر.س – 850,00 ر.س</p>
+        <p>Seats: 7 Seater, Luggage: 08 to 10</p>
+        <div class="rate-list">
+            <strong>Select Route:</strong>
+            <form id="stariaForm">
+                <ul>
+                    <li><input type="radio" name="routeStaria" value="Jeddah Airport to Makkah Hotel - 400"> Jeddah Airport to Makkah Hotel – 400 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Makkah Hotel to Jeddah Airport - 350"> Makkah Hotel to Jeddah Airport – 350 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Makkah Hotel to Madina Hotel - 700"> Makkah Hotel to Madina Hotel – 700 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Madina Hotel to Makkah Hotel - 700"> Madina Hotel to Makkah Hotel – 700 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Madina Airport to Madina Hotel - 250"> Madina Airport to Madina Hotel – 250 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Madina Hotel to Madina Airport - 200"> Madina Hotel to Madina Airport – 200 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Makkah Ziyarat - 350"> Makkah Ziyarat – 350 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Madina Ziyarat - 300"> Madina Ziyarat – 300 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Jeddah Airport to Madina Hotel - 800"> Jeddah Airport to Madina Hotel – 800 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Jeddah to Taif & Return - 850"> Jeddah to Taif & Return – 850 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Makkah to Taif & Return (Taif Ziyarat) - 650"> Makkah to Taif & Return (Taif Ziyarat) – 650 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Jeddah Airport to Jeddah Hotel - 300"> Jeddah Airport to Jeddah Hotel – 300 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Hotel to Train Station - 200"> Hotel to Train Station – 200 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Train Station to Hotel - 200"> Train Station to Hotel – 200 ر.س</li>
+                    <li><input type="radio" name="routeStaria" value="Per Hour Rate - 200"> Per Hour Rate – 200 ر.س</li>
+                </ul>
+                <label for="travelDateStaria">Select Travel Date & Time:</label>
+                <input type="datetime-local" id="travelDateStaria" name="travelDateStaria">
+                <button type="button" onclick="sendTransportationOrder('Hyundai Staria')">Book Hyundai Staria</button>
             </form>
         </div>
     </div>
 
     <script>
-        function sendTransportationOrder() {
-            // Get selected route
-            var route = document.querySelector('input[name="route"]:checked');
-            var travelDate = document.getElementById("travelDate").value;
-            
+        function sendTransportationOrder(carType) {
+            var route, travelDate;
+
+            // Get the selected route and date for each vehicle
+            if (carType === 'H1 Hyundai') {
+                route = document.querySelector('input[name="routeHyundai"]:checked');
+                travelDate = document.getElementById("travelDateHyundai").value;
+            } else if (carType === 'Ford Taurus') {
+                route = document.querySelector('input[name="routeFord"]:checked');
+                travelDate = document.getElementById("travelDateFord").value;
+            } else if (carType === 'Hyundai Staria') {
+                route = document.querySelector('input[name="routeStaria"]:checked');
+                travelDate = document.getElementById("travelDateStaria").value;
+            }
+
+            // Check if route and date are selected
             if (!route || !travelDate) {
                 alert("Please select a route and travel date/time.");
                 return;
             }
 
-            var message = `Transportation Booking: Car - H1 Hyundai\nRoute: ${route.value}\nTravel Date & Time: ${travelDate}`;
+            // Construct WhatsApp message
+            var message = `Transportation Booking: Car - ${carType}\nRoute: ${route.value}\nTravel Date & Time: ${travelDate}`;
             window.open(`https://wa.me/966563902706?text=${encodeURIComponent(message)}`);
         }
     </script>
