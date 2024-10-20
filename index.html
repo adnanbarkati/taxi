@@ -4,29 +4,81 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Transportation Booking</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+        h1 {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 0;
+        }
+        form {
+            background-color: white;
+            padding: 20px;
+            margin: 20px auto;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            max-width: 500px;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+        select, input[type="number"] {
+            padding: 10px;
+            margin-top: 10px;
+            width: 100%;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        a {
+            color: #4CAF50;
+            text-decoration: none;
+            display: block;
+            margin: 20px 0;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome to Our Transportation Service</h1>
-    <h2>Book Your Ride</h2>
-    
+    <h1>Transportation Booking</h1>
     <form id="transportationForm">
         <label for="carType">Select Car:</label>
         <select id="carType">
-            <option value="sedan">Sedan</option>
-            <option value="suv">SUV</option>
-            <option value="van">Van</option>
+            <option value="sedan">Sedan (Toyota Camry)</option>
+            <option value="suv">SUV (Toyota Land Cruiser)</option>
+            <option value="van">Van (Hyundai H1)</option>
+            <option value="luxury">Luxury (Lexus LX)</option>
         </select>
-        
-        <br><br>
-        
+
         <label for="route">Select Route:</label>
         <select id="route">
-            <option value="city-tour">City Tour</option>
-            <option value="airport">Airport</option>
-            <option value="intercity">Intercity</option>
+            <option value="airport-madina">Jeddah Airport to Madina</option>
+            <option value="airport-makkah">Jeddah Airport to Makkah</option>
+            <option value="madina-makkah">Madina to Makkah</option>
+            <option value="makkah-airport">Makkah to Jeddah Airport</option>
         </select>
-        
-        <br><br>
+
         <button type="button" onclick="sendTransportationOrder()">Book Now</button>
     </form>
 
@@ -39,9 +91,7 @@
         }
     </script>
 
-    <br><br>
     <a href="dates.html">Order Dates</a>
-    <br>
     <a href="food.html">Order Food</a>
 </body>
 </html>
