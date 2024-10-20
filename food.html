@@ -58,9 +58,48 @@
         a:hover {
             text-decoration: underline;
         }
+        /* Top Banner Styling */
+        .top-banner {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+        }
+        .top-banner img {
+            width: 50px;
+            vertical-align: middle;
+        }
+        .top-banner h2 {
+            display: inline;
+            font-size: 24px;
+            margin: 0 10px;
+        }
+        .top-banner p {
+            display: inline;
+            font-size: 16px;
+        }
+        /* Bottom Banner Styling */
+        .bottom-banner {
+            background-color: #008CBA;
+            color: white;
+            padding: 20px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .bottom-banner p {
+            margin: 0;
+            font-size: 18px;
+        }
     </style>
 </head>
 <body>
+    <!-- Top Banner -->
+    <div class="top-banner">
+        <img src="logo.png" alt="Company Logo"> <!-- Placeholder for Logo -->
+        <h2>YARS GROUP OF COMPANIES</h2>
+        <p>Contact us at: +966 563 902 706</p>
+    </div>
+
     <h1>Order Food</h1>
     <form id="foodForm">
         <label for="restaurant">Select Restaurant:</label>
@@ -92,5 +131,10 @@
 
     <a href="index.html">Back to Transportation</a>
     <a href="dates.html">Order Dates</a>
+
+    <!-- Bottom Banner -->
+    <div class="bottom-banner">
+        <p>Welcome to our online store! Now you can place an order, and we will deliver directly to your hotel or any address worldwide. Contact us via WhatsApp at +966563902706 for any inquiries.</p>
+    </div>
 </body>
 </html>
